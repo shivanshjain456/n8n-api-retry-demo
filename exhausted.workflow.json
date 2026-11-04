@@ -1,0 +1,55 @@
+{
+  "id": "synthetic-api-exhausted",
+  "name": "Synthetic API retry synthetic-api-exhausted",
+  "versionId": "f5afb7ca-61db-4602-8595-f7730933d5ac",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "nodes": [
+    {
+      "id": "trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "http",
+      "name": "Read API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "http://127.0.0.1:36483/records/synthetic-001",
+        "options": {
+          "timeout": 3000
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1100
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
