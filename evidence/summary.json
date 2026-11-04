@@ -1,0 +1,61 @@
+{
+  "testedAt": "2026-11-04T09:25:44.444Z",
+  "version": "1.121.3",
+  "nodeVersion": "v24.22.1",
+  "results": [
+    {
+      "id": "baseline",
+      "scenario": "transient429",
+      "exitCode": 1,
+      "attempts": 1,
+      "expectedSuccess": false,
+      "passed": true,
+      "intervalsMs": []
+    },
+    {
+      "id": "repaired",
+      "scenario": "transient429",
+      "exitCode": 0,
+      "attempts": 2,
+      "expectedSuccess": true,
+      "passed": true,
+      "intervalsMs": [
+        1162
+      ]
+    },
+    {
+      "id": "healthy",
+      "scenario": "healthy",
+      "exitCode": 0,
+      "attempts": 1,
+      "expectedSuccess": true,
+      "passed": true,
+      "intervalsMs": []
+    },
+    {
+      "id": "exhausted",
+      "scenario": "persistent429",
+      "exitCode": 1,
+      "attempts": 3,
+      "expectedSuccess": false,
+      "passed": true,
+      "intervalsMs": [
+        1173,
+        1106
+      ]
+    },
+    {
+      "id": "unauthorized",
+      "scenario": "unauthorized",
+      "exitCode": 1,
+      "attempts": 3,
+      "expectedSuccess": false,
+      "passed": true,
+      "intervalsMs": [
+        1164,
+        1108
+      ]
+    }
+  ],
+  "scope": "Actual n8n CLI HTTP Request execution against a synthetic loopback HTTP server. No external API, credentials, webhook listener, client data or production system."
+}
