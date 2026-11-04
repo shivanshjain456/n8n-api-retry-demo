@@ -1,0 +1,82 @@
+[
+  {
+    "scenario": "transient429",
+    "attempt": 1,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784320286,
+    "status": 429
+  },
+  {
+    "scenario": "transient429",
+    "attempt": 1,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784324867,
+    "status": 429
+  },
+  {
+    "scenario": "transient429",
+    "attempt": 2,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784326029,
+    "status": 200
+  },
+  {
+    "scenario": "healthy",
+    "attempt": 1,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784331156,
+    "status": 200
+  },
+  {
+    "scenario": "persistent429",
+    "attempt": 1,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784335536,
+    "status": 429
+  },
+  {
+    "scenario": "persistent429",
+    "attempt": 2,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784336709,
+    "status": 429
+  },
+  {
+    "scenario": "persistent429",
+    "attempt": 3,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784337815,
+    "status": 429
+  },
+  {
+    "scenario": "unauthorized",
+    "attempt": 1,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784341968,
+    "status": 401
+  },
+  {
+    "scenario": "unauthorized",
+    "attempt": 2,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784343132,
+    "status": 401
+  },
+  {
+    "scenario": "unauthorized",
+    "attempt": 3,
+    "method": "GET",
+    "path": "/records/synthetic-001",
+    "time": 1793784344240,
+    "status": 401
+  }
+]
