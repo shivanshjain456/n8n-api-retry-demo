@@ -1,0 +1,242 @@
+Permissions 0644 for n8n settings file [TEST_PROFILE]/.n8n/config are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.
+Execution was NOT successful. See log message for details.
+Execution error:
+====================================
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "error": {
+        "level": "warning",
+        "tags": {},
+        "description": "rate_limited",
+        "timestamp": 1793784320342,
+        "context": {
+          "itemIndex": 0,
+          "request": {
+            "headers": {
+              "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7"
+            },
+            "method": "GET",
+            "uri": "http://127.0.0.1:36483/records/synthetic-001",
+            "gzip": true,
+            "rejectUnauthorized": true,
+            "followRedirect": true,
+            "resolveWithFullResponse": true,
+            "followAllRedirects": true,
+            "timeout": 3000,
+            "encoding": null,
+            "json": false,
+            "useStream": true
+          }
+        },
+        "functionality": "regular",
+        "name": "NodeApiError",
+        "node": {
+          "id": "http",
+          "name": "Read API",
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.2,
+          "position": [
+            240,
+            0
+          ],
+          "parameters": {
+            "preBuiltAgentsCalloutHttpRequest": "",
+            "curlImport": "",
+            "method": "GET",
+            "url": "http://127.0.0.1:36483/records/synthetic-001",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": false,
+            "sendHeaders": false,
+            "sendBody": false,
+            "options": {
+              "timeout": 3000
+            },
+            "infoMessage": ""
+          }
+        },
+        "messages": [
+          "Try spacing your requests out using the batching settings under 'Options'"
+        ],
+        "httpCode": "429",
+        "message": "The service is receiving too many requests from you",
+        "stack": "NodeApiError: The service is receiving too many requests from you\n    at ExecuteContext.execute ([N8N_INSTALL]/node_modules/n8n-nodes-base/nodes/HttpRequest/V3/HttpRequestV3.node.ts:858:16)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at WorkflowExecute.executeNode ([N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1074:8)\n    at WorkflowExecute.runNode ([N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1255:11)\n    at [N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1691:27\n    at [N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2307:11"
+      },
+      "runData": {
+        "Manual Trigger": [
+          {
+            "startTime": 1793784320268,
+            "executionIndex": 0,
+            "source": [],
+            "hints": [],
+            "executionTime": 1,
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Read API": [
+          {
+            "startTime": 1793784320269,
+            "executionIndex": 1,
+            "source": [
+              {
+                "previousNode": "Manual Trigger"
+              }
+            ],
+            "hints": [],
+            "executionTime": 85,
+            "executionStatus": "error",
+            "error": {
+              "level": "warning",
+              "tags": {},
+              "description": "rate_limited",
+              "timestamp": 1793784320342,
+              "context": {
+                "itemIndex": 0,
+                "request": {
+                  "headers": {
+                    "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7"
+                  },
+                  "method": "GET",
+                  "uri": "http://127.0.0.1:36483/records/synthetic-001",
+                  "gzip": true,
+                  "rejectUnauthorized": true,
+                  "followRedirect": true,
+                  "resolveWithFullResponse": true,
+                  "followAllRedirects": true,
+                  "timeout": 3000,
+                  "encoding": null,
+                  "json": false,
+                  "useStream": true
+                }
+              },
+              "functionality": "regular",
+              "name": "NodeApiError",
+              "node": {
+                "id": "http",
+                "name": "Read API",
+                "type": "n8n-nodes-base.httpRequest",
+                "typeVersion": 4.2,
+                "position": [
+                  240,
+                  0
+                ],
+                "parameters": {
+                  "preBuiltAgentsCalloutHttpRequest": "",
+                  "curlImport": "",
+                  "method": "GET",
+                  "url": "http://127.0.0.1:36483/records/synthetic-001",
+                  "authentication": "none",
+                  "provideSslCertificates": false,
+                  "sendQuery": false,
+                  "sendHeaders": false,
+                  "sendBody": false,
+                  "options": {
+                    "timeout": 3000
+                  },
+                  "infoMessage": ""
+                }
+              },
+              "messages": [
+                "Try spacing your requests out using the batching settings under 'Options'"
+              ],
+              "httpCode": "429",
+              "message": "The service is receiving too many requests from you",
+              "stack": "NodeApiError: The service is receiving too many requests from you\n    at ExecuteContext.execute ([N8N_INSTALL]/node_modules/n8n-nodes-base/nodes/HttpRequest/V3/HttpRequestV3.node.ts:858:16)\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at WorkflowExecute.executeNode ([N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1074:8)\n    at WorkflowExecute.runNode ([N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1255:11)\n    at [N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1691:27\n    at [N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2307:11"
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Read API"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [
+        {
+          "node": {
+            "id": "http",
+            "name": "Read API",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              240,
+              0
+            ],
+            "parameters": {
+              "preBuiltAgentsCalloutHttpRequest": "",
+              "curlImport": "",
+              "method": "GET",
+              "url": "http://127.0.0.1:36483/records/synthetic-001",
+              "authentication": "none",
+              "provideSslCertificates": false,
+              "sendQuery": false,
+              "sendHeaders": false,
+              "sendBody": false,
+              "options": {
+                "timeout": 3000
+              },
+              "infoMessage": ""
+            }
+          },
+          "data": {
+            "main": [
+              [
+                {
+                  "json": {},
+                  "pairedItem": {
+                    "item": 0
+                  }
+                }
+              ]
+            ]
+          },
+          "source": {
+            "main": [
+              {
+                "previousNode": "Manual Trigger"
+              }
+            ]
+          }
+        }
+      ],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {},
+      "runtimeData": {
+        "version": 1,
+        "establishedAt": 1793784320268,
+        "source": "cli"
+      }
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2026-11-04T09:25:20.265Z",
+  "stoppedAt": "2026-11-04T09:25:20.355Z",
+  "status": "running"
+}
+Error executing workflow. See log messages for details.
+
+Execution error:
+====================================
+The service is receiving too many requests from you
+NodeApiError: The service is receiving too many requests from you
+    at ExecuteContext.execute ([N8N_INSTALL]/node_modules/n8n-nodes-base/nodes/HttpRequest/V3/HttpRequestV3.node.ts:858:16)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at WorkflowExecute.executeNode ([N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1074:8)
+    at WorkflowExecute.runNode ([N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1255:11)
+    at [N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:1691:27
+    at [N8N_INSTALL]/node_modules/n8n-core/src/execution-engine/workflow-execute.ts:2307:11
+The service is receiving too many requests from you
