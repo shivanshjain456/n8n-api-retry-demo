@@ -1,1 +1,13 @@
+Permissions 0644 for n8n settings file [TEST_PROFILE]/.n8n/config are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.
+Importing 1 workflows...
+Could not find workflow
+Error: Could not find workflow
+    at ActiveWorkflowManager.clearWebhooks ([N8N_INSTALL]/node_modules/n8n/src/active-workflow-manager.ts:254:10)
+    at ActiveWorkflowManager.remove ([N8N_INSTALL]/node_modules/n8n/src/active-workflow-manager.ts:874:4)
+    at ImportService.importWorkflows ([N8N_INSTALL]/node_modules/n8n/src/services/import.service.ts:82:5)
+    at ImportWorkflowsCommand.run ([N8N_INSTALL]/node_modules/n8n/src/commands/import/workflow.ts:104:3)
+    at CommandRegistry.execute ([N8N_INSTALL]/node_modules/n8n/src/command-registry.ts:67:4)
+    at [N8N_INSTALL]/node_modules/n8n/bin/n8n:63:2
 
+Could not remove webhooks of workflow "synthetic-api-repaired" because of error: "Could not find workflow"
+Successfully imported 1 workflow.
