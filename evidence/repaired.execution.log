@@ -1,0 +1,79 @@
+Permissions 0644 for n8n settings file [TEST_PROFILE]/.n8n/config are too wide. This is ignored for now, but in the future n8n will attempt to change the permissions automatically. To automatically enforce correct permissions now set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true (recommended), or turn this check off set N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false.
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Manual Trigger": [
+          {
+            "startTime": 1793784324855,
+            "executionIndex": 0,
+            "source": [],
+            "hints": [],
+            "executionTime": 0,
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Read API": [
+          {
+            "startTime": 1793784324856,
+            "executionIndex": 1,
+            "source": [
+              {
+                "previousNode": "Manual Trigger"
+              }
+            ],
+            "hints": [],
+            "executionTime": 1175,
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "ok": true,
+                      "recordId": "synthetic-001"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Read API"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {},
+      "runtimeData": {
+        "version": 1,
+        "establishedAt": 1793784324855,
+        "source": "cli"
+      }
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2026-11-04T09:25:24.852Z",
+  "stoppedAt": "2026-11-04T09:25:26.031Z",
+  "status": "running",
+  "finished": true
+}
